@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bùi Thị Quỳnh Trang — Personal Portfolio & Front-End Developer</title>
+  <meta name="description"
+    content="Trang cá nhân của Bùi Thị Quỳnh Trang — Sinh viên Sư Phạm Tin Học năm 4, Web Designer & Front-end Developer." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Ambient Glow Background Blobs -->
+  <div class="blob-wrapper" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" onclick="navigateTo('home')">
+        <span class="logo-box">QT</span>
+        <span class="logo-text">Quỳnh Trang<span class="logo-dot">.dev</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-page="home">Trang chủ</a></li>
+        <li><a href="#about" class="nav-link" data-page="about">Giới thiệu</a></li>
+        <li><a href="#skills" class="nav-link" data-page="skills">Kỹ năng</a></li>
+        <li><a href="#projects" class="nav-link" data-page="projects">Dự án</a></li>
+        <li><a href="#achievements" class="nav-link" data-page="achievements">Thành tích</a></li>
+        <li><a href="#contact" class="nav-link" data-page="contact">Liên hệ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Chuyển chế độ sáng/tối" title="Đổi giao diện">
+          <div class="theme-toggle-track">
+            <span class="theme-icon sun-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </span>
+            <span class="theme-icon moon-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+            <span class="theme-thumb"></span>
+          </div>
+          <span class="theme-label" id="themeLabel">Tối</span>
+        </button>
+
+        <button class="btn-nav-cta" onclick="navigateTo('contact')">
+          <span>Hợp tác</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Pages Container -->
+  <main id="main-content">
+
+    <!-- ══════════════════ PAGE: HOME ══════════════════ -->
+    <section id="home" class="page active">
+      <div class="hero-container">
+
+        <div class="hero-card">
+          <!-- Left: Profile Image Frame -->
+          <div class="hero-avatar-col">
+            <div class="avatar-wrapper">
+              <div class="avatar-ring-glow"></div>
+              <img src="avatar.jpg" alt="Bùi Thị Quỳnh Trang" class="avatar-img" id="avatar-img" />
+              <div class="status-badge" title="Đang sẵn sàng nhận cơ hội thực tập & dự án">
+                <span class="status-pulse"></span>
+                <span>Sẵn sàng hợp tác</span>
+              </div>
+            </div>
+
+            <!-- Floating Micro Cards -->
+            <div class="floating-badge fb-1">
+              <span class="fb-icon">🎓</span>
+              <div>
+                <strong>ĐH Sư Phạm</strong>
+                <small>SP Tin Học K26</small>
+              </div>
+            </div>
+
+            <div class="floating-badge fb-2">
+              <span class="fb-icon">🏆</span>
+              <div>
+                <strong>Giải Nhất NCKH</strong>
+                <small>Cấp Trường 2025</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Profile Info -->
+          <div class="hero-info-col">
+            <div class="hero-top-tag">
+              <span class="tag-sparkle">✨</span>
+              <span>Front-end Developer & Educational Technologist</span>
+            </div>
+
+            <h1 class="hero-title">
+              Bùi Thị Quỳnh Trang
+            </h1>
+
+            <div class="hero-tags">
+              <span class="chip">Sư Phạm Tin Học</span>
+              <span class="chip chip-purple">Web Design</span>
+              <span class="chip chip-pink">Front-end Dev</span>
+              <span class="chip chip-emerald">UI/UX Enthusiast</span>
+            </div>
+
+            <p class="hero-quote" id="heroQuote">
+              "Đam mê kết hợp giữa tư duy logic lập trình và nghệ thuật thiết kế giao diện để tạo ra các sản phẩm web
+              mượt mà, trực quan và mang lại giá trị thiết thực."
+            </p>
+
+            <!-- Key Metrics -->
+            <div class="hero-stats-grid">
+              <div class="stat-card">
+                <span class="stat-num" data-target="5">5+</span>
+                <span class="stat-desc">Dự án hoàn thành</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num" data-target="3.29">3.29</span>
+                <span class="stat-desc">GPA Giỏi / 4.0</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num" data-target="100">100%</span>
+                <span class="stat-desc">Đam mê & Trách nhiệm</span>
+              </div>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="hero-actions">
+              <button class="btn-primary" onclick="navigateTo('contact')">
+                <span>💌 Liên hệ làm việc</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <button class="btn-secondary" onclick="navigateTo('projects')">
+                <span>🎨 Xem các dự án</span>
+              </button>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-bar">
+              <span class="social-title">Kết nối:</span>
+              <div class="social-links">
+                <a href="https://github.com" target="_blank" rel="noopener" class="social-btn" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" title="Facebook">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+                <a href="mailto:trangbui.dev@gmail.com" class="social-btn" title="Email">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════ PAGE: ABOUT ══════════════════ -->
+    <section id="about" class="page">
+      <div class="page-container">
+
+        <div class="page-header">
+          <span class="section-tag">Hồ Sơ Cá Nhân</span>
+          <h2 class="page-title">Giới Thiệu Bản Thân</h2>
+          <p class="page-subtitle">Hành trình học tập, đam mê sáng tạo và định hướng phát triển</p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Left Side: Profile Photo & Details Card -->
+          <div class="about-left-col">
+            <div class="photo-card">
+              <div class="photo-container">
+                <img src="avatar.jpg" alt="Bùi Thị Quỳnh Trang" class="about-photo" />
+                <div class="photo-overlay"></div>
+                <span class="photo-badge">K26 SPTH</span>
+              </div>
+            </div>
+
+            <div class="quick-info-card">
+              <h4 class="card-head">Thông tin cá nhân</h4>
+              <div class="info-list">
+                <div class="info-item">
+                  <span class="info-icon">🎂</span>
+                  <div>
+                    <label>Ngày sinh</label>
+                    <span>01 / 01 / 2005</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <span class="info-icon">📍</span>
+                  <div>
+                    <label>Quê quán</label>
+                    <span>Thanh Hóa, Việt Nam</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <span class="info-icon">🎓</span>
+                  <div>
+                    <label>Chuyên ngành</label>
+                    <span>Sư Phạm Tin Học (Năm 4)</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <span class="info-icon">🌐</span>
+                  <div>
+                    <label>Ngoại ngữ</label>
+                    <span>Tiếng Việt (Bản ngữ) · Tiếng Anh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Bio & Timeline -->
+          <div class="about-right-col">
+
+            <div class="glass-card bio-card">
+              <h3 class="card-title">Xin chào! Mình là Quỳnh Trang 👋</h3>
+              <p class="bio-text">
+                Mình hiện đang là sinh viên năm 4 ngành <strong>Sư Phạm Tin Học</strong>. Với nền tảng kiến thức công
+                nghệ kết hợp với phương pháp sư phạm, mình hướng đến việc trở thành một <strong>Front-end
+                  Developer</strong> chuyên nghiệp và một nhà thiết kế trải nghiệm người dùng (UI/UX).
+              </p>
+              <p class="bio-text">
+                Một giao diện ấn tượng không chỉ nằm ở tính thẩm mỹ mà còn phải tối ưu hóa trải nghiệm tương tác. Hiện
+                tại, mình đang tập trung nghiên cứu luận văn tốt nghiệp với đề tài <em>"Xây dựng mô hình LLM giao tiếp
+                  hỗ trợ người dân tộc Thái"</em> nhằm đưa công nghệ đến gần hơn với cộng đồng.
+              </p>
+
+              <!-- Hobbies -->
+              <div class="hobbies-wrapper">
+                <h4>Sở thích & Niềm cảm hứng</h4>
+                <div class="hobbies-grid">
+                  <span class="hobby-pill">🎨 Thiết kế UI/UX</span>
+                  <span class="hobby-pill">💻 Lập trình Web</span>
+                  <span class="hobby-pill">📚 Đọc sách công nghệ</span>
+                  <span class="hobby-pill">🎵 Nghe nhạc Lofi</span>
+                  <span class="hobby-pill">☕ Cà phê sáng tạo</span>
+                  <span class="hobby-pill">🌿 Chăm sóc không gian xanh</span>
+                  <span class="hobby-pill">🤖 Nghiên cứu AI / LLM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Milestone Timeline -->
+            <div class="glass-card timeline-card">
+              <h3 class="card-title">Hành Trình Phát Triển</h3>
+
+              <div class="timeline">
+
+                <div class="timeline-item">
+                  <div class="tl-marker"></div>
+                  <div class="tl-content">
+                    <span class="tl-date">2023 – Nay</span>
+                    <h4 class="tl-title">Sinh viên Sư Phạm Tin Học — ĐH Sư Phạm</h4>
+                    <p>Học tập chuyên sâu về cấu trúc dữ liệu, thuật toán, phương pháp dạy học Tin học và phát triển tư
+                      duy lập trình.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="tl-marker"></div>
+                  <div class="tl-content">
+                    <span class="tl-date">2024</span>
+                    <h4 class="tl-title">Chinh phục Front-end Fundamentals & ICPC</h4>
+                    <p>Hoàn thành các khóa học HTML5, CSS3, JavaScript ES6+ và tham gia Kỳ thi lập trình sinh viên ICPC.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="tl-marker"></div>
+                  <div class="tl-content">
+                    <span class="tl-date">2025</span>
+                    <h4 class="tl-title">Giải Nhất SV NCKH & Phát Triển Ứng Dụng</h4>
+                    <p>Đạt Giải Nhất Nghiên cứu Khoa học cấp Trường, ứng dụng React.js & UI design vào sản phẩm thực tế.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-item active">
+                  <div class="tl-marker"></div>
+                  <div class="tl-content">
+                    <span class="tl-date">2026 (Hiện tại)</span>
+                    <h4 class="tl-title">Hoàn thiện Luận Văn Tốt Nghiệp & Thực Tập</h4>
+                    <p>Nghiên cứu mô hình LLM tiếng dân tộc Thái và chuẩn bị sẵn sàng cho công việc Front-end Developer.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════ PAGE: SKILLS ══════════════════ -->
+    <section id="skills" class="page">
+      <div class="page-container">
+
+        <div class="page-header">
+          <span class="section-tag">Năng Lực Chuyên Môn</span>
+          <h2 class="page-title">Kỹ Năng & Công Nghệ</h2>
+          <p class="page-subtitle">Những công cụ và nền tảng mình làm việc hàng ngày</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Card 1: Front-end Engineering -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon-box">⚡</div>
+              <div>
+                <h3>Lập Trình Front-end</h3>
+                <small>Web Engineering & Code</small>
+              </div>
+            </div>
+
+            <div class="skill-bars">
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-info">
+                  <span>HTML5 & Semantic Structure</span>
+                  <span class="skill-val">90%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-info">
+                  <span>CSS3 / SCSS / Responsive Layout</span>
+                  <span class="skill-val">85%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-info">
+                  <span>JavaScript (ES6+ / DOM / Async)</span>
+                  <span class="skill-val">75%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="75"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-info">
+                  <span>React.js & Component Architecture</span>
+                  <span class="skill-val">65%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="65"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-info">
+                  <span>Git & Version Control</span>
+                  <span class="skill-val">75%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="75"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card 2: Design & UI/UX -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon-box">🎨</div>
+              <div>
+                <h3>Thiết Kế UI/UX & Media</h3>
+                <small>User Experience & Design Tools</small>
+              </div>
+            </div>
+
+            <div class="skill-bars">
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-info">
+                  <span>Figma (UI Layout & Wireframing)</span>
+                  <span class="skill-val">80%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-info">
+                  <span>UI Design System & Color Theory</span>
+                  <span class="skill-val">75%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="75"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-info">
+                  <span>Canva Graphic & Banner Design</span>
+                  <span class="skill-val">90%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-info">
+                  <span>Adobe Photoshop (Photo Edit)</span>
+                  <span class="skill-val">65%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="65"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card 3: Soft Skills -->
+          <div class="glass-card skill-card skill-card-full">
+            <div class="skill-card-head">
+              <div class="skill-icon-box">🌟</div>
+              <div>
+                <h3>Kỹ Năng Mềm & Phương Pháp Sư Phạm</h3>
+                <small>Professional Competencies</small>
+              </div>
+            </div>
+
+            <div class="soft-skills-flex">
+
+              <div class="soft-skill-box">
+                <div class="soft-ring" data-pct="85">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle-fill" stroke-dasharray="85, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <span class="ring-text">85%</span>
+                </div>
+                <strong>Làm việc nhóm</strong>
+                <small>Team Collaboration</small>
+              </div>
+
+              <div class="soft-skill-box">
+                <div class="soft-ring" data-pct="80">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle-fill" stroke-dasharray="80, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <span class="ring-text">80%</span>
+                </div>
+                <strong>Tư duy sư phạm</strong>
+                <small>Instructional Design</small>
+              </div>
+
+              <div class="soft-skill-box">
+                <div class="soft-ring" data-pct="75">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle-fill" stroke-dasharray="75, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <span class="ring-text">75%</span>
+                </div>
+                <strong>Thuyết trình NCKH</strong>
+                <small>Public Speaking</small>
+              </div>
+
+              <div class="soft-skill-box">
+                <div class="soft-ring" data-pct="90">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle-fill" stroke-dasharray="90, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <span class="ring-text">90%</span>
+                </div>
+                <strong>Quản lý thời gian</strong>
+                <small>Time Management</small>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tech Stack Badges Wall -->
+        <div class="tech-wall-card glass-card">
+          <h4>🛠️ Công Cụ & Công Nghệ Thực Hành</h4>
+          <div class="tech-badges-container">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3 / Flexbox / Grid</span>
+            <span class="tech-pill">JavaScript ES6+</span>
+            <span class="tech-pill">React.js</span>
+            <span class="tech-pill">Git / GitHub</span>
+            <span class="tech-pill">Figma</span>
+            <span class="tech-pill">VS Code</span>
+            <span class="tech-pill">Canva Pro</span>
+            <span class="tech-pill">Adobe Photoshop</span>
+            <span class="tech-pill">Responsive Design</span>
+            <span class="tech-pill">RESTful API Integration</span>
+            <span class="tech-pill">Vite</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════ PAGE: PROJECTS ══════════════════ -->
+    <section id="projects" class="page">
+      <div class="page-container">
+
+        <div class="page-header">
+          <span class="section-tag">Sản Phẩm Đã Làm</span>
+          <h2 class="page-title">Dự Án Tiêu Biểu</h2>
+          <p class="page-subtitle">Những sản phẩm web và giao diện được xây dựng với tâm huyết</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="project-filters">
+          <button class="filter-tab active" data-filter="all">Tất cả sản phẩm</button>
+          <button class="filter-tab" data-filter="web">Web Development</button>
+          <button class="filter-tab" data-filter="app">Web App / Tool</button>
+          <button class="filter-tab" data-filter="ui">UI/UX Design</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- Project 1: Portfolio -->
+          <div class="project-card glass-card" data-category="web">
+            <div class="project-thumb thumb-gradient-1">
+              <div class="thumb-mockup">
+                <span class="mock-badge">LIVE SITE</span>
+                <span class="mock-emoji">✨</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-cat">Web Development</span>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">Trang web giới thiệu cá nhân thiết kế chuẩn Glassmorphic, hỗ trợ đổi 2 chế độ
+                Sáng/Tối, responsive mượt mà trên mọi màn hình.</p>
+              <div class="project-techs">
+                <span>HTML5</span>
+                <span>CSS3 Variables</span>
+                <span>JavaScript</span>
+                <span>SPA Architecture</span>
+              </div>
+              <div class="project-actions">
+                <a href="#home" class="btn-proj-link">
+                  <span>🔗 Trải nghiệm</span>
+                </a>
+                <a href="https://github.com" target="_blank" class="btn-proj-link ghost">
+                  <span>📂 GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Thai LLM Interface (NCKH) -->
+          <div class="project-card glass-card" data-category="app">
+            <div class="project-thumb thumb-gradient-2">
+              <div class="thumb-mockup">
+                <span class="mock-badge">NCKH 2025</span>
+                <span class="mock-emoji">🤖</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-cat">AI Web App</span>
+              <h3 class="project-title">Thai Ethnic LLM Chat Interface</h3>
+              <p class="project-desc">Giao diện web ứng dụng mô hình ngôn ngữ lớn (LLM) hỗ trợ giao tiếp và phiên dịch
+                tiếng dân tộc Thái cho sinh viên & cộng đồng.</p>
+              <div class="project-techs">
+                <span>React.js</span>
+                <span>Tailwind CSS</span>
+                <span>Web API</span>
+                <span>UI Design</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-proj-link">
+                  <span>🔗 Xem Chi Tiết</span>
+                </a>
+                <a href="#" class="btn-proj-link ghost">
+                  <span>📂 Báo cáo NCKH</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Task Flow App -->
+          <div class="project-card glass-card" data-category="app">
+            <div class="project-thumb thumb-gradient-3">
+              <div class="thumb-mockup">
+                <span class="mock-badge">WEB APP</span>
+                <span class="mock-emoji">📝</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-cat">Web App</span>
+              <h3 class="project-title">TaskFlow — Quản Lý Công Việc</h3>
+              <p class="project-desc">Ứng dụng quản lý lịch học và deadline cho sinh viên với tính năng phân loại, lọc
+                nhiệm vụ, đánh dấu tiến độ và lưu LocalStorage.</p>
+              <div class="project-techs">
+                <span>JavaScript ES6</span>
+                <span>LocalStorage API</span>
+                <span>CSS Grid</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-proj-link">
+                  <span>🔗 Demo Online</span>
+                </a>
+                <a href="#" class="btn-proj-link ghost">
+                  <span>📂 Source Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Cafe Finder UI Concept -->
+          <div class="project-card glass-card" data-category="ui">
+            <div class="project-thumb thumb-gradient-4">
+              <div class="thumb-mockup">
+                <span class="mock-badge">FIGMA CONCEPT</span>
+                <span class="mock-emoji">☕</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-cat">UI/UX Design</span>
+              <h3 class="project-title">Cafe Finder — Mobile & Web UI</h3>
+              <p class="project-desc">Bản thiết kế giao diện ứng dụng tìm kiếm quán cà phê không gian làm việc cho sinh
+                viên, phong cách tối giản và ấm áp.</p>
+              <div class="project-techs">
+                <span>Figma</span>
+                <span>UI Components</span>
+                <span>Interactive Prototype</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-proj-link">
+                  <span>🎨 Xem Prototype Figma</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Plant Shop Landing Page -->
+          <div class="project-card glass-card" data-category="web">
+            <div class="project-thumb thumb-gradient-5">
+              <div class="thumb-mockup">
+                <span class="mock-badge">LANDING PAGE</span>
+                <span class="mock-emoji">🌿</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-cat">Web Design</span>
+              <h3 class="project-title">GreenSpace — E-Commerce Landing</h3>
+              <p class="project-desc">Trang giới thiệu cửa hàng cây cảnh văn phòng với bộ lọc sản phẩm linh hoạt,
+                carousel hình ảnh và form đăng ký mua hàng.</p>
+              <div class="project-techs">
+                <span>HTML5</span>
+                <span>CSS Animation</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-proj-link">
+                  <span>🔗 Xem Demo</span>
+                </a>
+                <a href="#" class="btn-proj-link ghost">
+                  <span>📂 GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project CTA Card -->
+          <div class="project-card glass-card project-cta-card" data-category="all">
+            <div class="cta-inner">
+              <div class="cta-sparkle">🚀</div>
+              <h3>Bạn Có Ý Tưởng Mới?</h3>
+              <p>Mình luôn sẵn sàng tham gia các dự án phát triển web và hợp tác thiết kế UI/UX mới!</p>
+              <button class="btn-primary" onclick="navigateTo('contact')">
+                <span>Liên hệ ngay</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════ PAGE: ACHIEVEMENTS ══════════════════ -->
+    <section id="achievements" class="page">
+      <div class="page-container">
+
+        <div class="page-header">
+          <span class="section-tag">Chứng Nhận & Giải Thưởng</span>
+          <h2 class="page-title">Thành Tích Đạt Được</h2>
+          <p class="page-subtitle">Những cột mốc ghi nhận sự nỗ lực trong học tập và nghiên cứu</p>
+        </div>
+
+        <!-- Academic Key Stats Grid -->
+        <div class="ach-stats-grid">
+          <div class="ach-stat-card glass-card">
+            <div class="ac-icon">🎓</div>
+            <div class="ac-val">3.29 <small>/ 4.0</small></div>
+            <div class="ac-label">Điểm GPA Tích Lũy</div>
+          </div>
+          <div class="ach-stat-card glass-card">
+            <div class="ac-icon">🏆</div>
+            <div class="ac-val">01</div>
+            <div class="ac-label">Giải Nhất SV NCKH</div>
+          </div>
+          <div class="ach-stat-card glass-card">
+            <div class="ac-icon">🎖️</div>
+            <div class="ac-val">04</div>
+            <div class="ac-label">Học Kỳ Đạt Học Bổng</div>
+          </div>
+          <div class="ach-stat-card glass-card">
+            <div class="ac-icon">💻</div>
+            <div class="ac-val">ICPC</div>
+            <div class="ac-label">Chứng Nhận Quốc Tế</div>
+          </div>
+        </div>
+
+        <div class="achievements-content-grid">
+
+          <!-- Awards List -->
+          <div class="ach-column">
+            <h3 class="column-title">🥇 Giải Thưởng & Chứng Chỉ</h3>
+
+            <div class="award-list">
+
+              <div class="award-item glass-card">
+                <div class="award-badge-icon">🏆</div>
+                <div class="award-detail">
+                  <div class="award-header">
+                    <h4>Giải Nhất — Cuộc Thi SV Nghiên Cứu Khoa Học</h4>
+                    <span class="award-year">2025 – 2026</span>
+                  </div>
+                  <p class="award-desc">Đại diện nhóm 5 thành viên phụ trách toàn bộ phần thiết kế Giao diện người dùng
+                    và Lập trình Front-end cho ứng dụng.</p>
+                </div>
+              </div>
+
+              <div class="award-item glass-card">
+                <div class="award-badge-icon">🎖️</div>
+                <div class="award-detail">
+                  <div class="award-header">
+                    <h4>Danh Hiệu "Sinh Viên 5 Tốt" Cấp Trường</h4>
+                    <span class="award-year">2024 – 2025</span>
+                  </div>
+                  <p class="award-desc">Ghi nhận thành tích toàn diện trên 5 tiêu chí: Đạo đức tốt, Học tập tốt, Thể lực
+                    tốt, Tình nguyện tốt và Hội nhập tốt.</p>
+                </div>
+              </div>
+
+              <div class="award-item glass-card">
+                <div class="award-badge-icon">📜</div>
+                <div class="award-detail">
+                  <div class="award-header">
+                    <h4>Chứng Nhận Tham Gia Kỳ Thi Lập Trình ICPC</h4>
+                    <span class="award-year">2024</span>
+                  </div>
+                  <p class="award-desc">Tham gia Cuộc thi Lập trình Sinh viên Quốc tế ICPC Việt Nam, hoàn thiện tư duy
+                    thuật toán và giải quyết bài toán lớn.</p>
+                </div>
+              </div>
+
+              <div class="award-item glass-card">
+                <div class="award-badge-icon">💡</div>
+                <div class="award-detail">
+                  <div class="award-header">
+                    <h4>Giải Nhất SV Khởi Nghiệp Cấp Trường</h4>
+                    <span class="award-year">2024</span>
+                  </div>
+                  <p class="award-desc">Xây dựng mô hình khung dự án công nghệ khởi nghiệp sinh viên với tính ứng dụng
+                    cao.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- External Activities -->
+          <div class="ach-column">
+            <h3 class="column-title">🤝 Hoạt Động Ngoại Khóa & Xã Hội</h3>
+
+            <div class="activities-list glass-card">
+
+              <div class="act-item">
+                <div class="act-dot"></div>
+                <div class="act-info">
+                  <h4>Thành Viên Ban Kỹ Thuật — CLB Lập Trình Khoa</h4>
+                  <span class="act-date">2023 – Nay</span>
+                  <p>Hỗ trợ tổ chức workshop lập trình web cơ bản cho sinh viên khóa dưới và phát triển các sản phẩm nội
+                    bộ.</p>
+                </div>
+              </div>
+
+              <div class="act-item">
+                <div class="act-dot"></div>
+                <div class="act-info">
+                  <h4>Tình Nguyện Viên — Chiến Dịch "Mùa Hè Xanh"</h4>
+                  <span class="act-date">2024</span>
+                  <p>Phụ trách dạy tin học văn phòng và phổ cập kỹ năng ứng dụng công nghệ thông tin cho học sinh vùng
+                    khó khăn.</p>
+                </div>
+              </div>
+
+              <div class="act-item">
+                <div class="act-dot"></div>
+                <div class="act-info">
+                  <h4>Cộng Tác Viên Truyền Thông & Banner Design</h4>
+                  <span class="act-date">2023 – 2024</span>
+                  <p>Thiết kế toàn bộ hình ảnh, poster, ban-rôn truyền thông cho các sự kiện phong trào Đoàn Khoa.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════ PAGE: CONTACT ══════════════════ -->
+    <section id="contact" class="page">
+      <div class="page-container">
+
+        <div class="page-header">
+          <span class="section-tag">Kết Nối Với Mình</span>
+          <h2 class="page-title">Liên Hệ & Hợp Tác</h2>
+          <p class="page-subtitle">Hãy gửi tin nhắn để trao đổi về công việc, dự án hoặc câu hỏi chuyên môn!</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Direct Info -->
+          <div class="contact-info-card glass-card">
+            <h3>Thông Tin Trực Tiếp</h3>
+            <p>Mình luôn sẵn sàng phản hồi các trao đổi về cơ hội thực tập, dự án Web Design hoặc tư vấn UI/UX.</p>
+
+            <div class="contact-channels">
+
+              <a href="mailto:trangbui.dev@gmail.com" class="channel-item">
+                <div class="ch-icon">📧</div>
+                <div>
+                  <label>Email chính</label>
+                  <span>trangbui.dev@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://facebook.com" target="_blank" class="channel-item">
+                <div class="ch-icon">💬</div>
+                <div>
+                  <label>Facebook</label>
+                  <span>fb.com/quynhtrang.spth</span>
+                </div>
+              </a>
+
+              <a href="https://github.com" target="_blank" class="channel-item">
+                <div class="ch-icon">💻</div>
+                <div>
+                  <label>GitHub</label>
+                  <span>github.com/quynhtrang-dev</span>
+                </div>
+              </a>
+
+              <div class="channel-item">
+                <div class="ch-icon">📍</div>
+                <div>
+                  <label>Địa điểm</label>
+                  <span>Hà Nội / Thanh Hóa (Remote & On-site)</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="availability-box">
+              <span class="pulse-dot"></span>
+              <span>Đang sẵn sàng ứng tuyển vị trí <strong>Front-end Intern / Junior</strong></span>
+            </div>
+          </div>
+
+          <!-- Contact Interactive Form -->
+          <div class="contact-form-card glass-card">
+            <h3>Gửi Tin Nhắn Phản Hồi</h3>
+
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">Họ và tên <span class="req">*</span></label>
+                  <input type="text" id="fname" placeholder="Nguyễn Văn A" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="femail">Địa chỉ Email <span class="req">*</span></label>
+                  <input type="email" id="femail" placeholder="example@domain.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="fsubject">Chủ đề liên hệ</label>
+                <select id="fsubject">
+                  <option value="">-- Chọn chủ đề trao đổi --</option>
+                  <option value="Thực tập / Tuyển dụng">Thực tập / Vị trí việc làm</option>
+                  <option value="Hợp tác dự án Web">Hợp tác dự án Web / Design</option>
+                  <option value="Hỏi đáp kỹ thuật">Trao đổi kỹ thuật / NCKH</option>
+                  <option value="Làm quen">Giao lưu chia sẻ 😊</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="fmessage">Nội dung tin nhắn <span class="req">*</span></label>
+                <textarea id="fmessage" rows="5" placeholder="Nhập nội dung lời nhắn của bạn tại đây..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+                <span>🚀 Gửi Tin Nhắn</span>
+              </button>
+
+              <!-- Form Success Toast Notification -->
+              <div class="form-toast" id="formSuccess">
+                <span class="toast-icon">✅</span>
+                <div>
+                  <strong>Gửi thành công!</strong>
+                  <p>Cảm ơn bạn đã liên hệ. Quỳnh Trang sẽ phản hồi sớm nhất nhé!</p>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer id="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" onclick="navigateTo('home')">
+          <span class="logo-box">QT</span>
+          <span class="logo-text">Quỳnh Trang<span class="logo-dot">.dev</span></span>
+        </a>
+        <p>Phát triển giao diện web hiện đại & Đam mê đổi mới sáng tạo trong tin học.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#home" onclick="navigateTo('home')">Trang chủ</a>
+        <a href="#about" onclick="navigateTo('about')">Giới thiệu</a>
+        <a href="#skills" onclick="navigateTo('skills')">Kỹ năng</a>
+        <a href="#projects" onclick="navigateTo('projects')">Dự án</a>
+        <a href="#achievements" onclick="navigateTo('achievements')">Thành tích</a>
+        <a href="#contact" onclick="navigateTo('contact')">Liên hệ</a>
+      </div>
+
+      <div class="footer-copy">
+        <p>© 2026 Bùi Thị Quỳnh Trang. Designed & Built with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+
+</html>
